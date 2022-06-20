@@ -12,8 +12,11 @@ conn = psycopg2.connect(
 )
 
 cur = conn.cursor()
+# ADD TABLE
 # cur.execute(
 #     'CREATE TABLE test_table(equip_id smallint PRIMARY KEY, color varchar(50) NOT NULL);')
+
+# INSERT DATA
 cur.execute(
     """
     INSERT INTO test_table(equip_id, color) VALUES(%s, %s);
